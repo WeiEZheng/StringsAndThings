@@ -15,7 +15,18 @@ public class StringsAndThings {
      *           countYZ("day fyyyz"); // Should return 2
      */
     public Integer countYZ(String input){
-        return null;
+        int countOfYZ=0, i=0;
+        while (i<input.length()) {
+            if ((input.charAt(i) == 'y' || input.charAt(i)=='z')
+                    && (i+1==input.length() || !(Character.isLetter(input.charAt(i+1))))) {
+                countOfYZ++;
+            }
+            //If statement check if the letters are y or z, then checks if it was the end of the string
+            //or if the next character is a letter to indicate the end of the word. If both are true, then
+            //increment count by 1
+            i++;
+        }
+        return countOfYZ;
     }
 
     /**
