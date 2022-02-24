@@ -38,8 +38,11 @@ public class StringsAndThings {
      *           removeString("Hello there", "e") //  Should return "Hllo thr"
      *           removeString("Hello there", "x") // Should return "Hello there"
      */
-    public String removeString(String base, String remove){
-        return null;
+    public String removeString(String base, String remove) {
+        String result = base.replaceAll(remove, "");
+        return result;
+        //Using the replaceAll method with base as the string and remove as the regex statement, we
+        //can replace the matching parts with null.
     }
 
     /**
@@ -51,7 +54,7 @@ public class StringsAndThings {
      *           containsEqualNumberOfIsAndNot("noisxxnotyynotxisi") // Should return true
      */
     public Boolean containsEqualNumberOfIsAndNot(String input){
-        return null;
+    return null;
     }
 
     /**
@@ -62,7 +65,8 @@ public class StringsAndThings {
      *           gHappy("xxggyygxx") // Should return  false
      */
     public Boolean gIsHappy(String input){
-        return null;
+        Boolean test;
+        return test;
     }
 
 
