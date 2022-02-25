@@ -1,6 +1,9 @@
 package io.zipcoder;
 
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * @author tariq
  */
@@ -54,7 +57,18 @@ public class StringsAndThings {
      *           containsEqualNumberOfIsAndNot("noisxxnotyynotxisi") // Should return true
      */
     public Boolean containsEqualNumberOfIsAndNot(String input){
-    return null;
+        int iscount=0,notcount=0;
+        Pattern pattern = Pattern.compile("is");
+        Pattern pattern1 = Pattern.compile("not");
+        Matcher matcher = pattern.matcher(input);
+        Matcher matcher1 = pattern1.matcher(input);
+        for (int i=0; matcher.find();i++){
+            iscount++;
+        }
+        for (int i=0; matcher1.find();i++){
+            notcount++;
+        }
+        return iscount == notcount;
     }
 
     /**
